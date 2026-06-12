@@ -1,0 +1,1 @@
+ALTER TABLE public.collaboration_requests ADD COLUMN email text;

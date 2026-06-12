@@ -1,0 +1,1 @@
+UPDATE packages SET name = 'Video Editing', price = '25€/βίντεο', description = 'Επαγγελματικό editing βίντεο για social media', features = ARRAY['Editing βίντεο για Social Media', 'Κοψίματα, transitions & effects', 'Προσθήκη μουσικής & subtitles', 'Color grading', 'Παράδοση σε 36 ώρες', 'Έτοιμα για Instagram & TikTok'] WHERE id = 'd0ac85d2-25c1-489f-bcac-926a98ddf303';

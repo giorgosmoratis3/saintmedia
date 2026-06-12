@@ -1,0 +1,1 @@
+UPDATE public.site_content SET content = jsonb_set(content::jsonb, '{subheadline}', '"Content Marketing Agency για τοπικές επιχειρήσεις, δημιουργούμε στρατηγικά, viral βιντεάκια που αυξάνουν πελάτες και έσοδα."') WHERE id = 'hero';
