@@ -61,8 +61,9 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
       ],
       cta: isEl ? "ΞΕΚΙΝΑ" : "GET STARTED",
       serviceType: "E-shop",
-      accent: "hsl(210 100% 60%)",
-      glow: "hsl(210 100% 60% / 0.4)",
+      // AI Automation - μωβ
+      accent: "hsl(270 100% 65%)",
+      glow: "hsl(270 100% 65% / 0.40)",
     },
     {
       id: "ai",
@@ -78,8 +79,9 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
       ],
       cta: isEl ? "ΞΕΚΙΝΑ" : "GET STARTED",
       serviceType: "AI Automation",
-      accent: "hsl(180 100% 55%)",
-      glow: "hsl(180 100% 55% / 0.35)",
+      // E-Shop - κόκκινο
+      accent: "hsl(0 100% 60%)",
+      glow: "hsl(0 100% 60% / 0.40)",
     },
   ];
 
