@@ -235,7 +235,8 @@ const Hero = () => {
       <div className="container-max section-padding relative z-10 w-full">
         {/* Hero header */}
         <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12 px-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-10 md:mb-14 animate-fade-in"
+          <div
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-10 md:mb-14 animate-fade-in"
             style={{
               background: "hsl(0 0% 100% / 0.08)",
               border: "1px solid hsl(0 0% 100% / 0.12)",
@@ -247,22 +248,32 @@ const Hero = () => {
               SAINTMEDIA · Web & AI Studio
             </span>
           </div>
-          <h1 key={language} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-background">
+          <h1
+            key={language}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] tracking-tight text-background"
+          >
             {(() => {
-              const tokens: Array<{ text: string; className?: string }> = language === "el"
-                ? [
-                    { text: "Web Development", className: "hero-shimmer-blue" },
-                    { text: "&" },
-                    { text: "AI Automation", className: "hero-shimmer-red" },
-                    { text: "που" }, { text: "επιταχύνουν" }, { text: "την" }, { text: "επιχείρησή" }, { text: "σου." },
-                  ]
-                : [
-                    { text: "Smart" },
-                    { text: "Web Development", className: "hero-shimmer-blue" },
-                    { text: "&" },
-                    { text: "AI Automation", className: "hero-shimmer-red" },
-                    { text: "for" }, { text: "fast-growing" }, { text: "companies." },
-                  ];
+              const tokens: Array<{ text: string; className?: string }> =
+                language === "el"
+                  ? [
+                      { text: "Web Development", className: "hero-shimmer-blue" },
+                      { text: "&" },
+                      { text: "AI Automation", className: "hero-shimmer-red" },
+                      { text: "που" },
+                      { text: "επιταχύνουν" },
+                      { text: "την" },
+                      { text: "επιχείρησή" },
+                      { text: "σου." },
+                    ]
+                  : [
+                      { text: "Smart" },
+                      { text: "Web Development", className: "hero-shimmer-blue" },
+                      { text: "&" },
+                      { text: "AI Automation", className: "hero-shimmer-red" },
+                      { text: "for" },
+                      { text: "fast-growing" },
+                      { text: "companies." },
+                    ];
               return tokens.map((tok, i) => (
                 <span key={i} className="inline-block overflow-hidden align-bottom pb-1 -mb-1">
                   <span
@@ -276,7 +287,8 @@ const Hero = () => {
               ));
             })()}
           </h1>
-          <p className="mt-4 md:mt-5 text-sm md:text-base text-white/55 max-w-xl mx-auto leading-relaxed animate-fade-in"
+          <p
+            className="mt-4 md:mt-5 text-sm md:text-base text-white/55 max-w-xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
             {language === "el"
@@ -285,11 +297,22 @@ const Hero = () => {
           </p>
 
           {/* Audience branches */}
-          <div className="mt-8 md:mt-10 grid grid-cols-2 gap-3 md:gap-6 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <div
+            className="mt-8 md:mt-10 grid grid-cols-2 gap-3 md:gap-6 max-w-2xl mx-auto animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
             {/* Left card - Fast-growing startups */}
             <div className="relative">
               {/* Arrow from title to left card */}
-              <svg className="absolute -top-7 md:-top-9 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 text-white/40 -rotate-[25deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                className="absolute -top-7 md:-top-9 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 text-white/40 -rotate-[25deg]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M12 5v14" />
                 <path d="m5 12 7 7 7-7" />
               </svg>
@@ -302,9 +325,11 @@ const Hero = () => {
                   border: "1px solid hsl(0 0% 100% / 0.12)",
                 }}
               >
-                <span className="text-[10px] md:text-xs font-medium text-primary uppercase tracking-wider">{t.hero.forLabel}</span>
+                <span className="text-[10px] md:text-xs font-medium text-primary uppercase tracking-wider">
+                  {t.hero.forLabel}
+                </span>
                 <h3 className="mt-1 text-sm md:text-lg font-bold text-white leading-tight">
-                  {language === "el" ? "Startups" : "Fast-growing Startups"}
+                  {language === "el" ? "Startups" : "Startups"}
                 </h3>
                 <p className="mt-1.5 text-[11px] md:text-sm text-white/55 leading-snug">
                   {language === "el"
@@ -316,7 +341,15 @@ const Hero = () => {
 
             {/* Right card - Local business */}
             <div className="relative">
-              <svg className="absolute -top-7 md:-top-9 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 text-white/40 rotate-[25deg]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                className="absolute -top-7 md:-top-9 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 text-white/40 rotate-[25deg]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M12 5v14" />
                 <path d="m5 12 7 7 7-7" />
               </svg>
@@ -329,7 +362,12 @@ const Hero = () => {
                   border: "1px solid hsl(0 0% 100% / 0.12)",
                 }}
               >
-                <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider" style={{ color: '#FF6D5A' }}>{t.hero.forLabel}</span>
+                <span
+                  className="text-[10px] md:text-xs font-medium uppercase tracking-wider"
+                  style={{ color: "#FF6D5A" }}
+                >
+                  {t.hero.forLabel}
+                </span>
                 <h3 className="mt-1 text-sm md:text-lg font-bold text-white leading-tight">
                   {language === "el" ? "Τοπικές Επιχειρήσεις" : "Local Businesses"}
                 </h3>
@@ -368,8 +406,7 @@ const Hero = () => {
                   <div
                     className="rounded-2xl md:rounded-3xl p-5 md:p-7 flex flex-col items-center text-center gap-3 md:gap-4"
                     style={{
-                      background:
-                        "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.03) 100%)",
+                      background: "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.03) 100%)",
                       backdropFilter: "blur(20px) saturate(180%)",
                       WebkitBackdropFilter: "blur(20px) saturate(180%)",
                       border: "1px solid hsl(0 0% 100% / 0.12)",
@@ -392,8 +429,7 @@ const Hero = () => {
                     <div
                       className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center"
                       style={{
-                        background:
-                          "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.04) 100%)",
+                        background: "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.04) 100%)",
                         border: "1px solid hsl(0 0% 100% / 0.1)",
                       }}
                     >
@@ -404,9 +440,7 @@ const Hero = () => {
                       {renderHeadline(slide.headline, slide.type)}
                     </h3>
 
-                    <p className="text-white/60 text-xs md:text-sm max-w-xs leading-relaxed">
-                      {slide.description}
-                    </p>
+                    <p className="text-white/60 text-xs md:text-sm max-w-xs leading-relaxed">{slide.description}</p>
 
                     {/* Learn more hint */}
                     {pos === "center" && (
@@ -438,9 +472,7 @@ const Hero = () => {
                 key={i}
                 onClick={() => setCurrent(i)}
                 className={`transition-all duration-300 rounded-full ${
-                  i === current
-                    ? "w-8 h-2 bg-primary"
-                    : "w-2 h-2 bg-white/30 hover:bg-white/50"
+                  i === current ? "w-8 h-2 bg-primary" : "w-2 h-2 bg-white/30 hover:bg-white/50"
                 }`}
                 aria-label={`Slide ${i + 1}`}
               />
