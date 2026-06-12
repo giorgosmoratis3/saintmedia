@@ -51,8 +51,11 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
       tagline: isEl ? "Πλήρες κατάστημα Shopify έτοιμο να πουλήσει" : "Full Shopify store ready to sell",
       features: [
         { text: isEl ? "Setup Shopify καταστήματος" : "Shopify store setup", included: true },
-        { text: isEl ? "Έως 50 προϊόντα" : "Up to 50 products", included: true },
-        { text: isEl ? "Σύνδεση πληρωμών" : "Payment integration", included: true },
+        { text: isEl ? "Σύνσεση Box Now " : "Box Now Integration ", included: true },
+        {
+          text: isEl ? "Σύνδεση Apple & Google Pay πληρωμών" : "Apple & Google Pay Payment integration",
+          included: true,
+        },
         { text: isEl ? "Email & Order automations" : "Email & order automations", included: true },
         { text: isEl ? "Advanced upsell flows" : "Advanced upsell flows", included: true },
       ],
