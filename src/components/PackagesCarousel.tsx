@@ -29,8 +29,8 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
   const packages: Pkg[] = [
     {
       id: "website",
-      badge: isEl ? "ΙΣΤΟΣΕΛΙΔΑ" : "Growth",
-      name: isEl ? "Ιστοσελίδα" : "Web Development",
+      badge: isEl ? "ΙΣΤΟΣΕΛΙΔΑ" : "GROWTH",
+      name: isEl ? "Ιστοσελίδα" : "Website",
       tagline: isEl ? "Ιδανικό για νέες & αναπτυσσόμενες επιχειρήσεις" : "Perfect for new and growing businesses",
       features: [
         { text: isEl ? " Ενσωμάτωση Google Reviews" : "Google Reviews Widget", included: true },
