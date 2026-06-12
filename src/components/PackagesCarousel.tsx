@@ -29,11 +29,11 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
   const packages: Pkg[] = [
     {
       id: "website",
-      badge: isEl ? "ΙΣΤΟΣΕΛΙΔΑ" : "WEBSITE",
-      name: isEl ? "Ιστοσελίδα" : "Website",
+      badge: isEl ? "ΙΣΤΟΣΕΛΙΔΑ" : "WEBSITE DEVELOPMENT",
+      name: isEl ? "Ιστοσελίδα" : "Website Development",
       tagline: isEl ? "Ιδανικό για νέες & αναπτυσσόμενες επιχειρήσεις" : "Perfect for new and growing businesses",
       features: [
-        { text: isEl ? "Έως 6 σελίδες" : "Up to 6 pages", included: true },
+        { text: isEl ? " Ενσωμάτωση Google Reviews" : "Google Reviews Widget", included: true },
         { text: isEl ? "Responsive σε όλες τις συσκευές" : "Fully responsive design", included: true },
         { text: isEl ? "Βασικό SEO setup" : "Basic SEO setup", included: true },
         { text: isEl ? "Φόρμα επικοινωνίας" : "Contact form", included: true },
@@ -191,8 +191,7 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
                 <div
                   className="rounded-3xl overflow-hidden relative"
                   style={{
-                    background:
-                      "linear-gradient(135deg, hsl(0 0% 100% / 0.08) 0%, hsl(0 0% 100% / 0.03) 100%)",
+                    background: "linear-gradient(135deg, hsl(0 0% 100% / 0.08) 0%, hsl(0 0% 100% / 0.03) 100%)",
                     backdropFilter: "blur(40px) saturate(180%)",
                     WebkitBackdropFilter: "blur(40px) saturate(180%)",
                     border: "1px solid hsl(0 0% 100% / 0.12)",
@@ -225,20 +224,15 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
                     >
                       {pkg.badge}
                     </span>
-                    <h3 className="mt-5 text-2xl md:text-3xl font-bold text-white tracking-tight">
-                      {pkg.name}
-                    </h3>
-                    <p className="mt-3 text-sm md:text-base text-white/65 leading-relaxed">
-                      {pkg.tagline}
-                    </p>
+                    <h3 className="mt-5 text-2xl md:text-3xl font-bold text-white tracking-tight">{pkg.name}</h3>
+                    <p className="mt-3 text-sm md:text-base text-white/65 leading-relaxed">{pkg.tagline}</p>
                   </div>
 
                   {/* Divider */}
                   <div
                     className="mx-6 md:mx-8 h-px"
                     style={{
-                      background:
-                        "linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.15), transparent)",
+                      background: "linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.15), transparent)",
                     }}
                   />
 
@@ -254,14 +248,9 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
                               strokeWidth={3}
                             />
                           ) : (
-                            <X
-                              className="w-5 h-5 flex-shrink-0 mt-0.5 text-white/25"
-                              strokeWidth={3}
-                            />
+                            <X className="w-5 h-5 flex-shrink-0 mt-0.5 text-white/25" strokeWidth={3} />
                           )}
-                          <span className={f.included ? "text-white/85" : "text-white/35"}>
-                            {f.text}
-                          </span>
+                          <span className={f.included ? "text-white/85" : "text-white/35"}>{f.text}</span>
                         </li>
                       ))}
                     </ul>
@@ -273,8 +262,7 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
                       }}
                       className="mt-7 md:mt-8 w-full py-4 rounded-2xl text-white font-bold tracking-wide flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
                       style={{
-                        background:
-                          "linear-gradient(135deg, hsl(0 0% 100% / 0.12) 0%, hsl(0 0% 100% / 0.06) 100%)",
+                        background: "linear-gradient(135deg, hsl(0 0% 100% / 0.12) 0%, hsl(0 0% 100% / 0.06) 100%)",
                         border: `1px solid ${pkg.accent}`,
                         backdropFilter: "blur(12px)",
                         boxShadow: `0 8px 24px -8px ${pkg.glow}`,
