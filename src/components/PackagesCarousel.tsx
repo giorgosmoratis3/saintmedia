@@ -37,7 +37,7 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
         { text: isEl ? "Responsive σε όλες τις συσκευές" : "Fully responsive design", included: true },
         { text: isEl ? "Βασικό SEO setup" : "Basic SEO setup", included: true },
         { text: isEl ? "Φόρμα επικοινωνίας" : "Contact form", included: true },
-        { text: isEl ? "AI Automations" : "AI Automations", included: false },
+        { text: isEl ? "AI Automations" : "AI Automations", included: true },
       ],
       cta: isEl ? "ΞΕΚΙΝΑ" : "GET STARTED",
       serviceType: isEl ? "Κατασκευή Ιστοσελίδας" : "Website Development",
