@@ -182,17 +182,13 @@ const Hero = () => {
 
   const renderHeadline = (headline: string, type: SlideType) => {
     const keywords =
-      type === "email"
-        ? ["Email System"]
-        : type === "chatbot"
-          ? ["AI Chatbot"]
-          : type === "qrmenu"
-            ? ["QR-MENU"]
-            : type === "website"
-              ? ["Website", "Ιστοσελίδα", "βιτρίνα", "storefront"]
-              : type === "eshop"
-                ? ["E-Shop"]
-                : [];
+      type === "qrmenu"
+        ? ["QR-MENU"]
+        : type === "website"
+          ? ["Website", "Ιστοσελίδα", "βιτρίνα", "storefront"]
+          : type === "eshop"
+            ? ["E-Shop"]
+            : [];
     if (keywords.length === 0) return headline;
     const pattern = new RegExp(
       `(${keywords.map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
@@ -433,7 +429,7 @@ const Hero = () => {
                       {renderHeadline(slide.headline, slide.type)}
                     </h3>
 
-                    <p className="text-white/60 text-xs md:text-sm max-w-xs leading-relaxed">{slide.description}</p>
+                    <p className="text-white/60 text-xs md:text-sm max-w-xs leading-relaxed line-clamp-2">{slide.description}</p>
 
                     {/* Learn more hint */}
                     {pos === "center" && (
