@@ -429,7 +429,7 @@ const Hero = () => {
                       {renderHeadline(slide.headline, slide.type)}
                     </h3>
 
-                    <p className="text-white/60 text-xs md:text-sm max-w-xs leading-relaxed">{slide.description}</p>
+                    <p className="text-white/60 text-xs md:text-sm max-w-xs leading-relaxed line-clamp-2">{slide.description}</p>
 
                     {/* Learn more hint */}
                     {pos === "center" && (
