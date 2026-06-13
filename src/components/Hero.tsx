@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, QrCode, BellRing, CalendarCheck, Camera, Mail, Bot } from "lucide-react";
+import { ArrowRight, QrCode, BellRing, CalendarCheck, Mail, Bot } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import CollaborationRequestModal from "./CollaborationRequestModal";
 import { useLanguage } from "@/contexts/language-context";
