@@ -206,15 +206,17 @@ const Hero = () => {
 
   const renderHeadline = (headline: string, type: SlideType) => {
     const keywords =
-      type === "viral"
-        ? ["VIRAL"]
-        : type === "qrmenu"
-          ? ["QR-MENU"]
-          : type === "website"
-            ? ["Website", "Ιστοσελίδα", "βιτρίνα", "storefront"]
-            : type === "eshop"
-              ? ["E-Shop"]
-              : [];
+      type === "email"
+        ? ["Email System"]
+        : type === "chatbot"
+          ? ["AI Chatbot"]
+          : type === "qrmenu"
+            ? ["QR-MENU"]
+            : type === "website"
+              ? ["Website", "Ιστοσελίδα", "βιτρίνα", "storefront"]
+              : type === "eshop"
+                ? ["E-Shop"]
+                : [];
     if (keywords.length === 0) return headline;
     const pattern = new RegExp(
       `(${keywords.map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
