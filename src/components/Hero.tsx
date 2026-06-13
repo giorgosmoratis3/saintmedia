@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, QrCode, BellRing, CalendarCheck, Camera } from "lucide-react";
+import { ArrowRight, QrCode, BellRing, CalendarCheck, Camera, Mail, Bot } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import CollaborationRequestModal from "./CollaborationRequestModal";
 import { useLanguage } from "@/contexts/language-context";
@@ -20,7 +20,7 @@ interface HeroContent {
   stat3_label: string;
 }
 
-type SlideType = "website" | "eshop" | "viral" | "qrmenu" | "waiter" | "booking" | "automation";
+type SlideType = "website" | "eshop" | "email" | "qrmenu" | "waiter" | "booking" | "automation" | "chatbot";
 
 const Hero = () => {
   const { t, language } = useLanguage();
@@ -64,13 +64,28 @@ const Hero = () => {
       serviceType: "E-shop",
     },
     {
-      type: "viral",
-      badge: t.hero.viralBadge,
-      headline: language === "el" && content ? content.headline : t.hero.viralHeadline,
-      description: language === "el" && content ? content.subheadline : t.hero.viralSub,
-      cta: language === "el" && content ? content.cta : t.hero.viralCta,
-      icon: <Camera className="w-7 h-7 md:w-10 md:h-10 text-white/70" strokeWidth={1.5} />,
-      serviceType: "Social Media",
+      type: "email",
+      badge: language === "el" ? "Email System" : "Email System",
+      headline: language === "el" ? "Email System" : "Email System",
+      description:
+        language === "el"
+          ? "Automated email flows που κρατάνε την επιχείρησή σου οργανωμένη. Από ειδοποιήσεις φόρμας επικοινωνίας έως επιβεβαιώσεις πελατών και follow-ups, συνδέουμε την ιστοσελίδα σου με ένα απλό σύστημα που εξοικονομεί χρόνο και σε βοηθάει να απαντάς γρηγορότερα."
+          : "Automated email flows that keep your business organized. From contact form notifications to customer confirmations and follow-ups, we connect your website with a simple system that saves time and helps you respond faster.",
+      cta: language === "el" ? "Μάθε περισσότερα" : "Learn more",
+      icon: <Mail className="w-7 h-7 md:w-10 md:h-10 text-white/70" strokeWidth={1.5} />,
+      serviceType: "Email System",
+    },
+    {
+      type: "chatbot",
+      badge: language === "el" ? "AI Chatbot" : "AI Chatbot",
+      headline: language === "el" ? "AI Chatbot" : "AI Chatbot",
+      description:
+        language === "el"
+          ? "Ένας έξυπνος βοηθός ιστοσελίδας που απαντάει συχνές ερωτήσεις, συλλέγει στοιχεία πελατών και καθοδηγεί τους επισκέπτες στο σωστό επόμενο βήμα. Ιδανικό για inquiries, bookings, ερωτήσεις υπηρεσιών και lead qualification."
+          : "An intelligent website assistant that answers common questions, collects customer details, and guides visitors to the right next step. Perfect for inquiries, bookings, service questions, and lead qualification.",
+      cta: language === "el" ? "Μάθε περισσότερα" : "Learn more",
+      icon: <Bot className="w-7 h-7 md:w-10 md:h-10 text-white/70" strokeWidth={1.5} />,
+      serviceType: "AI Chatbot",
     },
     {
       type: "qrmenu",
