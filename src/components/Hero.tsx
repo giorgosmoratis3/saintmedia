@@ -1,30 +1,16 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, QrCode, BellRing, CalendarCheck, Mail, Bot } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
 import CollaborationRequestModal from "./CollaborationRequestModal";
 import { useLanguage } from "@/contexts/language-context";
 import shopifyLogo from "@/assets/shopify-logo.png";
 import wordpressLogo from "@/assets/wordpress-logo.png";
 import n8nLogo from "@/assets/n8n-logo.png";
 
-interface HeroContent {
-  headline: string;
-  subheadline: string;
-  cta: string;
-  stat1_value: string;
-  stat1_label: string;
-  stat2_value: string;
-  stat2_label: string;
-  stat3_value: string;
-  stat3_label: string;
-}
-
 type SlideType = "website" | "eshop" | "email" | "qrmenu" | "waiter" | "booking" | "automation" | "chatbot";
 
 const Hero = () => {
   const { t, language } = useLanguage();
-  const [content, setContent] = useState<HeroContent | null>(null);
   const [current, setCurrent] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -129,16 +115,6 @@ const Hero = () => {
   ];
 
   const minSwipeDistance = 50;
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      const { data } = await supabase.from("site_content").select("content").eq("id", "hero").maybeSingle();
-      if (data?.content) {
-        setContent(data.content as unknown as HeroContent);
-      }
-    };
-    fetchContent();
-  }, []);
 
   const next = useCallback(() => {
     setCurrent((p) => (p + 1) % slides.length);
