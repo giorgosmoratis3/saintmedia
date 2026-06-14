@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { CheckCircle2, Zap, Package, Workflow, Sparkles } from "lucide-react";
+import { CheckCircle2, Zap, Package, Workflow, Sparkles, Globe2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/contexts/language-context";
 import AnimatedSection from "@/components/AnimatedSection";
+import Globe3D from "@/components/Globe3D";
 
 interface WhyUsContent {
   title: string;
