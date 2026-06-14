@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { ArrowRight, Check, X } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import CardDetailModal, { CardDetail } from "./CardDetailModal";
 
 interface PackagesCarouselProps {
   onSelect: (serviceType: string) => void;
