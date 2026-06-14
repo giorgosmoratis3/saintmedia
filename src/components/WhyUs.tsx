@@ -218,7 +218,6 @@ const WhyUs = () => {
                 </div>
               ))}
             </div>
-          </div>
         </AnimatedSection>
       </div>
     </section>
