@@ -384,7 +384,13 @@ const Hero = () => {
                   key={i}
                   onClick={() => {
                     if (pos === "center") {
-                      openCollaborationModal(slide.serviceType);
+                      openDetail({
+                        badge: slide.badge,
+                        title: slide.headline,
+                        description: slide.description,
+                        icon: slide.icon,
+                        serviceType: slide.serviceType,
+                      });
                     } else {
                       setCurrent(i);
                     }
