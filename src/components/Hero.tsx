@@ -384,11 +384,25 @@ const Hero = () => {
                   key={i}
                   onClick={() => {
                     if (pos === "center") {
+                      let accent = "hsl(0 0% 60%)";
+                      let glow = "hsl(0 0% 60% / 0.35)";
+                      if (slide.type === "website") {
+                        accent = "hsl(210 100% 55%)";
+                        glow = "hsl(210 100% 55% / 0.35)";
+                      } else if (slide.type === "eshop") {
+                        accent = "hsl(270 100% 65%)";
+                        glow = "hsl(270 100% 65% / 0.40)";
+                      } else if (slide.type === "automation") {
+                        accent = "hsl(0 100% 60%)";
+                        glow = "hsl(0 100% 60% / 0.40)";
+                      }
                       openDetail({
                         badge: slide.badge,
                         title: slide.headline,
                         description: slide.description,
                         icon: slide.icon,
+                        accent,
+                        glow,
                         serviceType: slide.serviceType,
                       });
                     } else {
