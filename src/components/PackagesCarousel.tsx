@@ -308,6 +308,13 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
           ))}
         </div>
       </div>
+
+      <CardDetailModal
+        isOpen={!!detail}
+        onClose={() => setDetail(null)}
+        detail={detail}
+        onRequest={onSelect}
+      />
     </section>
   );
 };
