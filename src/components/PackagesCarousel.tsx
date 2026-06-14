@@ -24,6 +24,7 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
   const [current, setCurrent] = useState(1);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [detail, setDetail] = useState<CardDetail | null>(null);
 
   const isEl = language === "el";
 
