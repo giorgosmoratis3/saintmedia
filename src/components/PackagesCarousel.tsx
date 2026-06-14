@@ -185,8 +185,17 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
               <div
                 key={pkg.id}
                 onClick={() => {
-                  if (pos === "center") onSelect(pkg.serviceType);
-                  else setCurrent(i);
+                  if (pos === "center") {
+                    setDetail({
+                      badge: pkg.badge,
+                      title: pkg.name,
+                      description: pkg.tagline,
+                      features: pkg.features.filter((f) => f.included).map((f) => f.text),
+                      accent: pkg.accent,
+                      glow: pkg.glow,
+                      serviceType: pkg.serviceType,
+                    });
+                  } else setCurrent(i);
                 }}
                 className="absolute w-[88%] sm:w-[68%] md:w-[44%] lg:w-[36%] cursor-pointer"
                 style={{
