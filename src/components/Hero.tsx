@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, QrCode, BellRing, CalendarCheck, Mail, Bot } from "lucide-react";
 import CollaborationRequestModal from "./CollaborationRequestModal";
+import CardDetailModal, { CardDetail } from "./CardDetailModal";
 import { useLanguage } from "@/contexts/language-context";
 import shopifyLogo from "@/assets/shopify-logo.png";
 import wordpressLogo from "@/assets/wordpress-logo.png";
@@ -16,11 +17,14 @@ const Hero = () => {
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalServiceType, setModalServiceType] = useState("");
+  const [detail, setDetail] = useState<CardDetail | null>(null);
 
   const openCollaborationModal = (serviceType: string) => {
     setModalServiceType(serviceType);
     setModalOpen(true);
   };
+
+  const openDetail = (d: CardDetail) => setDetail(d);
 
   const slides: Array<{
     type: SlideType;
