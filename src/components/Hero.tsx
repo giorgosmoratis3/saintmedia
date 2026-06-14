@@ -485,6 +485,13 @@ const Hero = () => {
         onClose={() => setModalOpen(false)}
         serviceType={modalServiceType}
       />
+
+      <CardDetailModal
+        isOpen={!!detail}
+        onClose={() => setDetail(null)}
+        detail={detail}
+        onRequest={openCollaborationModal}
+      />
     </section>
   );
 };
