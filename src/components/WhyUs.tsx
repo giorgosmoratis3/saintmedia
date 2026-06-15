@@ -134,6 +134,7 @@ const WhyUs = () => {
         </AnimatedSection>
 
         <AnimatedSection>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <span
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold text-white/80 mb-5 tracking-wider uppercase"
@@ -183,12 +184,12 @@ const WhyUs = () => {
               </div>
             </div>
 
-
             <div className="flex items-center justify-center">
               <WhyUsRotatingCards />
             </div>
-
+          </div>
         </AnimatedSection>
+
       </div>
     </section>
   );
