@@ -74,59 +74,63 @@ const WhyUs = () => {
 
       <div className="container-max section-padding relative z-10">
         <AnimatedSection>
-          {/* Globe showcase */}
-          <div
-            className="relative mb-16 md:mb-20 rounded-3xl overflow-hidden"
-            style={{
-              background: "linear-gradient(135deg, hsl(0 0% 100% / 0.06) 0%, hsl(0 0% 100% / 0.02) 100%)",
-              border: "1px solid hsl(0 0% 100% / 0.10)",
-              backdropFilter: "blur(40px) saturate(180%)",
-              WebkitBackdropFilter: "blur(40px) saturate(180%)",
-              boxShadow: "inset 0 1px 0 hsl(0 0% 100% / 0.06), 0 30px 80px hsl(210 100% 50% / 0.10)",
-            }}
-          >
-            <div className="grid lg:grid-cols-2 gap-0 items-center">
-              <div className="p-8 md:p-12 lg:p-14 order-2 lg:order-1">
+          {/* Full-screen realistic 3D globe */}
+          <div className="relative -mx-4 md:-mx-8 mb-16 md:mb-20 h-[100vh] min-h-[600px] rounded-3xl overflow-hidden">
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 50%, hsl(210 100% 55% / 0.18) 0%, transparent 65%)",
+              }}
+            />
+            <Globe3D className="absolute inset-0 w-full h-full" />
+
+            <div className="pointer-events-none absolute top-0 left-0 right-0 p-6 md:p-10 flex justify-center">
+              <div className="max-w-2xl text-center">
                 <span
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold text-white/80 mb-5 tracking-wider uppercase"
+                  className="pointer-events-auto inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold text-white/80 mb-4 tracking-wider uppercase"
                   style={{
-                    background: "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.04) 100%)",
+                    background:
+                      "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.04) 100%)",
                     border: "1px solid hsl(0 0% 100% / 0.15)",
+                    backdropFilter: "blur(20px) saturate(180%)",
+                    WebkitBackdropFilter: "blur(20px) saturate(180%)",
                   }}
                 >
                   <Globe2 className="w-3.5 h-3.5" style={{ color: "hsl(195 100% 60%)" }} />
                   {t.whyUs.badge}
                 </span>
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white tracking-tight leading-tight">
-                  Συνδέουμε επιχειρήσεις με τον <span style={{ background: "var(--gradient-accent)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>κόσμο</span>.
+                <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 text-white tracking-tight leading-tight">
+                  Συνδέουμε επιχειρήσεις με τον{" "}
+                  <span
+                    style={{
+                      background: "var(--gradient-accent)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    κόσμο
+                  </span>.
                 </h3>
-                <p className="text-white/65 text-sm md:text-base leading-relaxed mb-6">
-                  Στόχος μας είναι να φέρουμε την επιχείρησή σου μπροστά στο σωστό κοινό — οπουδήποτε κι αν βρίσκεται. Από την Πάτρα έως κάθε γωνιά του πλανήτη, χτίζουμε ψηφιακές γέφυρες που μετατρέπουν επισκέπτες σε πελάτες.
+                <p className="text-white/65 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+                  Σύρε τη γη με τον κέρσορα και πέρνα πάνω από μια χώρα για να την εξερευνήσεις.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {["Global Reach", "Live Automation", "24/7 Presence", "Smart Targeting"].map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1.5 rounded-full text-xs text-white/70"
-                      style={{
-                        background: "hsl(0 0% 100% / 0.06)",
-                        border: "1px solid hsl(0 0% 100% / 0.12)",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
-              <div className="relative h-[360px] md:h-[460px] lg:h-[520px] order-1 lg:order-2">
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background: "radial-gradient(circle at 50% 50%, hsl(210 100% 55% / 0.18) 0%, transparent 60%)",
-                  }}
-                />
-                <Globe3D className="absolute inset-0" />
-              </div>
+            </div>
+
+            <div className="pointer-events-none absolute bottom-4 left-0 right-0 flex justify-center">
+              <span
+                className="px-3 py-1.5 rounded-full text-[11px] text-white/60"
+                style={{
+                  background: "hsl(0 0% 0% / 0.35)",
+                  border: "1px solid hsl(0 0% 100% / 0.12)",
+                  backdropFilter: "blur(10px)",
+                  WebkitBackdropFilter: "blur(10px)",
+                }}
+              >
+                Drag to rotate • Hover για χώρα
+              </span>
             </div>
           </div>
         </AnimatedSection>
