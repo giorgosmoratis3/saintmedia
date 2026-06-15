@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { CheckCircle2, Zap, Package, Workflow, Sparkles, Globe2 } from "lucide-react";
+import { Sparkles, Globe2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useLanguage } from "@/contexts/language-context";
 import AnimatedSection from "@/components/AnimatedSection";
 import Globe3D from "@/components/Globe3D";
+import WhyUsRotatingCards from "@/components/WhyUsRotatingCards";
+
 
 interface WhyUsContent {
   title: string;
@@ -31,12 +33,8 @@ const WhyUs = () => {
 
   const [content, setContent] = useState<WhyUsContent>(defaultContent);
 
-  const reasons = [
-    { icon: CheckCircle2, title: t.whyUs.reason1Title, description: t.whyUs.reason1Desc, accent: "hsl(195 100% 50%)" },
-    { icon: Zap, title: t.whyUs.reason2Title, description: t.whyUs.reason2Desc, accent: "hsl(210 100% 60%)" },
-    { icon: Package, title: t.whyUs.reason3Title, description: t.whyUs.reason3Desc, accent: "hsl(180 100% 55%)" },
-    { icon: Workflow, title: t.whyUs.reason4Title, description: t.whyUs.reason4Desc, accent: "hsl(225 100% 65%)" },
-  ];
+
+
 
   useEffect(() => {
     const fetchContent = async () => {
@@ -136,6 +134,7 @@ const WhyUs = () => {
         </AnimatedSection>
 
         <AnimatedSection>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <span
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold text-white/80 mb-5 tracking-wider uppercase"
@@ -185,44 +184,12 @@ const WhyUs = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-              {reasons.map((reason, i) => (
-                <div
-                  key={reason.title}
-                  className="group relative flex gap-4 p-5 md:p-6 rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.02]"
-                  style={{
-                    background: "linear-gradient(135deg, hsl(0 0% 100% / 0.08) 0%, hsl(0 0% 100% / 0.03) 100%)",
-                    border: "1px solid hsl(0 0% 100% / 0.12)",
-                    backdropFilter: "blur(40px) saturate(180%)",
-                    WebkitBackdropFilter: "blur(40px) saturate(180%)",
-                    boxShadow: "inset 0 1px 0 hsl(0 0% 100% / 0.08)",
-                    animation: `fade-in 0.6s ease-out ${i * 0.1}s both`,
-                  }}
-                >
-                  <div
-                    className="absolute -top-16 -right-16 w-40 h-40 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{ background: `radial-gradient(circle, ${reason.accent}40 0%, transparent 70%)` }}
-                  />
-                  <div
-                    className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center relative"
-                    style={{
-                      background: "linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.04) 100%)",
-                      border: `1px solid ${reason.accent}60`,
-                      boxShadow: `0 0 20px ${reason.accent}30`,
-                    }}
-                  >
-                    <reason.icon className="w-5 h-5" style={{ color: reason.accent }} />
-                  </div>
-                  <div className="relative z-10 flex-1">
-                    <h3 className="font-semibold text-base md:text-lg mb-1 text-white">
-                      {reason.title}
-                    </h3>
-                    <p className="text-white/55 text-sm leading-relaxed">{reason.description}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="flex items-center justify-center">
+              <WhyUsRotatingCards />
             </div>
+          </div>
         </AnimatedSection>
+
       </div>
     </section>
   );
