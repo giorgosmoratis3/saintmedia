@@ -87,8 +87,9 @@ const Globe3D = ({ className }: { className?: string }) => {
     const h = container.clientHeight;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(42, w / h, 0.1, 100);
     camera.position.set(0, 0, 5);
+
 
     let renderer: THREE.WebGLRenderer;
     try {
