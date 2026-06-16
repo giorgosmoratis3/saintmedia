@@ -87,8 +87,9 @@ const Globe3D = ({ className }: { className?: string }) => {
     const h = container.clientHeight;
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(40, w / h, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(42, w / h, 0.1, 100);
     camera.position.set(0, 0, 5);
+
 
     let renderer: THREE.WebGLRenderer;
     try {
@@ -118,7 +119,14 @@ const Globe3D = ({ className }: { className?: string }) => {
     scene.add(rim);
 
     const globeGroup = new THREE.Group();
+    // Horizon framing: push globe down so only top arc is visible
+    globeGroup.position.y = -2.0;
+    globeGroup.scale.setScalar(1.55);
+    // Start centered on Europe
+    globeGroup.rotation.y = 1.83;
+    globeGroup.rotation.x = -0.35;
     scene.add(globeGroup);
+
 
     const loader = new THREE.TextureLoader();
     loader.setCrossOrigin("anonymous");
@@ -396,7 +404,7 @@ const Globe3D = ({ className }: { className?: string }) => {
     let isDragging = false;
     let lastX = 0;
     let lastY = 0;
-    let rotOffsetX = 0;
+    let rotOffsetX = -0.35;
 
     const onDown = (e: PointerEvent) => {
       isDragging = true;
