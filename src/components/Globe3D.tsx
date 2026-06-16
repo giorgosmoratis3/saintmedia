@@ -118,7 +118,9 @@ const Globe3D = ({ className }: { className?: string }) => {
     scene.add(fill);
 
     // ============ Globe ============
-    const globe = new ThreeGlobe({ animateIn: true })
+    const globe = new ThreeGlobe({ animateIn: true }) as unknown as ThreeGlobe & THREE.Object3D;
+    (globe as unknown as ThreeGlobe)
+
       .globeImageUrl("https://unpkg.com/three-globe@2.31.1/example/img/earth-blue-marble.jpg")
       .bumpImageUrl("https://unpkg.com/three-globe@2.31.1/example/img/earth-topology.png")
       .showAtmosphere(true)
