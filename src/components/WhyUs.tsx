@@ -26,13 +26,7 @@ const WhyUs = () => {
         <AnimatedSection>
           {/* Horizon-framed realistic 3D globe */}
           <div className="relative -mx-4 md:-mx-8 h-[100vh] min-h-[640px] rounded-3xl overflow-hidden">
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 70%, hsl(210 100% 55% / 0.28) 0%, transparent 65%)",
-              }}
-            />
+
             <Globe3D className="absolute inset-0 w-full h-full" />
 
             {/* Overlay copy (only top portion, nothing below) */}
