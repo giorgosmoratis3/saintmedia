@@ -404,7 +404,7 @@ const Globe3D = ({ className }: { className?: string }) => {
     let isDragging = false;
     let lastX = 0;
     let lastY = 0;
-    let rotOffsetX = 0;
+    let rotOffsetX = -0.35;
 
     const onDown = (e: PointerEvent) => {
       isDragging = true;
