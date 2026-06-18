@@ -11,7 +11,7 @@ import Admin from "./pages/Admin";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
 import ServicesPage from "./pages/ServicesPage";
-import WhyUsPage from "./pages/WhyUsPage";
+
 import PortfolioPage from "./pages/PortfolioPage";
 import ContactPage from "./pages/ContactPage";
 import PackagesPage from "./pages/PackagesPage";
@@ -36,7 +36,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<ServicesPage />} />
-            <Route path="/why-us" element={<WhyUsPage />} />
+            
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/packages" element={<PackagesPage />} />
