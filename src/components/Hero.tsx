@@ -421,28 +421,29 @@ const Hero = () => {
             className="relative p-[1px]"
             style={{
               borderRadius: "120px 6px 120px 6px",
-              background: "linear-gradient(180deg, hsl(210 100% 55% / 0.35) 0%, transparent 25%, transparent 75%, hsl(210 100% 55% / 0.5) 100%)",
-              boxShadow: "0 0 50px hsl(210 100% 55% / 0.12), 0 4px 20px hsl(0 0% 0% / 0.4)",
+              background: "linear-gradient(180deg, hsl(210 100% 55% / 0.4) 0%, transparent 25%, transparent 75%, hsl(210 100% 55% / 0.6) 100%)",
+              boxShadow: "0 0 50px hsl(210 100% 55% / 0.15), 0 4px 20px hsl(0 0% 0% / 0.5)",
             }}
           >
             <div
-              className="relative flex items-center gap-3 px-6 py-2 md:px-10 md:py-2.5"
+              className="relative flex items-center gap-3 px-6 py-2.5 md:px-10 md:py-3"
               style={{
-                background: "linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 5%) 40%, hsl(0 0% 5%) 60%, hsl(0 0% 10%) 100%)",
+                background: "linear-gradient(180deg, hsl(0 0% 7%) 0%, hsl(0 0% 3%) 40%, hsl(0 0% 3%) 60%, hsl(0 0% 7%) 100%)",
                 borderRadius: "120px 6px 120px 6px",
-                boxShadow: "inset 0 1px 0 hsl(0 0% 100% / 0.05)",
+                boxShadow: "inset 0 1px 0 hsl(0 0% 100% / 0.04)",
               }}
             >
               {/* Bottom neon trace line */}
               <div
-                className="absolute bottom-[1px] left-[8%] right-[8%] h-[1.5px] rounded-full"
+                className="absolute bottom-[1px] left-[6%] right-[6%] h-[2px] rounded-full"
                 style={{
-                  background: "linear-gradient(90deg, transparent 0%, hsl(210 100% 55% / 0.7) 15%, hsl(210 100% 55% / 0.7) 85%, transparent 100%)",
+                  background: "linear-gradient(90deg, transparent 0%, hsl(210 100% 55% / 0.8) 12%, hsl(210 100% 55% / 0.8) 88%, transparent 100%)",
                   filter: "blur(0.5px)",
+                  boxShadow: "0 0 8px hsl(210 100% 55% / 0.5)",
                 }}
               />
 
-              <Mail className="w-4 h-4 md:w-5 md:h-5 text-white/30 flex-shrink-0" strokeWidth={1.5} />
+              <Mail className="w-4 h-4 md:w-5 md:h-5 text-white/40 flex-shrink-0" strokeWidth={1.5} />
               <form onSubmit={handleEmailSubmit} className="flex items-center gap-2 flex-1 min-w-0">
                 <input
                   type="email"
@@ -450,21 +451,21 @@ const Hero = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 bg-transparent text-white text-sm md:text-base placeholder:text-white/20 outline-none min-w-0"
+                  className="flex-1 bg-transparent text-white text-sm md:text-base placeholder:text-white/25 outline-none min-w-0"
                 />
                 <button
                   type="submit"
                   disabled={isSubmittingEmail}
-                  className="flex-shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-50"
+                  className="flex-shrink-0 w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-50"
                   style={{
                     background: "linear-gradient(135deg, hsl(210 100% 55%) 0%, hsl(220 100% 45%) 100%)",
-                    boxShadow: "0 0 14px hsl(210 100% 55% / 0.45)",
+                    boxShadow: "0 0 18px hsl(210 100% 55% / 0.5)",
                   }}
                 >
                   {isSubmittingEmail ? (
-                    <Loader2 className="w-3 h-3 text-white animate-spin" />
+                    <Loader2 className="w-3.5 h-3.5 text-white animate-spin" />
                   ) : (
-                    <Send className="w-3 h-3 text-white" />
+                    <Send className="w-3.5 h-3.5 text-white" />
                   )}
                 </button>
               </form>
