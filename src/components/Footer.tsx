@@ -53,7 +53,6 @@ const Footer = () => {
       title: isEl ? "ΕΤΑΙΡΕΙΑ" : "COMPANY",
       links: [
         { label: isEl ? "Αρχική" : "Home", href: "/" },
-        { label: isEl ? "Γιατί Εμάς" : "Why Us", href: "/why-us" },
         { label: isEl ? "Επικοινωνία" : "Contact", href: "/contact" },
       ],
     },
