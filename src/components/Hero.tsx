@@ -12,8 +12,14 @@ import n8nLogo from "@/assets/n8n-logo.png";
 
 type SlideType = "website" | "eshop" | "email" | "qrmenu" | "waiter" | "booking" | "automation" | "chatbot";
 
-const Hero = () => {
+const Hero = ({ started = true }: { started?: boolean }) => {
   const { t, language } = useLanguage();
+  const [entered, setEntered] = useState(false);
+  useEffect(() => {
+    if (!started) return;
+    const id = requestAnimationFrame(() => setEntered(true));
+    return () => cancelAnimationFrame(id);
+  }, [started]);
   const [current, setCurrent] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
