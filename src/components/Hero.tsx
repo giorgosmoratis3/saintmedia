@@ -260,7 +260,13 @@ const Hero = ({ started = true }: { started?: boolean }) => {
   return (
     <section
       className="relative flex flex-col items-center justify-center overflow-hidden touch-pan-y pt-8 pb-12 md:pt-12 md:pb-20"
-      style={{ background: "var(--gradient-hero)" }}
+      style={{
+        background: "var(--gradient-hero)",
+        opacity: entered ? 1 : 0,
+        transform: entered ? "translateY(0) scale(1)" : "translateY(24px) scale(0.985)",
+        filter: entered ? "blur(0px)" : "blur(8px)",
+        transition: "opacity 900ms cubic-bezier(0.22,1,0.36,1), transform 1100ms cubic-bezier(0.22,1,0.36,1), filter 900ms cubic-bezier(0.22,1,0.36,1)",
+      }}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
