@@ -12,8 +12,14 @@ import n8nLogo from "@/assets/n8n-logo.png";
 
 type SlideType = "website" | "eshop" | "email" | "qrmenu" | "waiter" | "booking" | "automation" | "chatbot";
 
-const Hero = () => {
+const Hero = ({ started = true }: { started?: boolean }) => {
   const { t, language } = useLanguage();
+  const [entered, setEntered] = useState(false);
+  useEffect(() => {
+    if (!started) return;
+    const id = requestAnimationFrame(() => setEntered(true));
+    return () => cancelAnimationFrame(id);
+  }, [started]);
   const [current, setCurrent] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -254,7 +260,13 @@ const Hero = () => {
   return (
     <section
       className="relative flex flex-col items-center justify-center overflow-hidden touch-pan-y pt-8 pb-12 md:pt-12 md:pb-20"
-      style={{ background: "var(--gradient-hero)" }}
+      style={{
+        background: "var(--gradient-hero)",
+        opacity: entered ? 1 : 0,
+        transform: entered ? "translateY(0) scale(1)" : "translateY(24px) scale(0.985)",
+        filter: entered ? "blur(0px)" : "blur(8px)",
+        transition: "opacity 900ms cubic-bezier(0.22,1,0.36,1), transform 1100ms cubic-bezier(0.22,1,0.36,1), filter 900ms cubic-bezier(0.22,1,0.36,1)",
+      }}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
