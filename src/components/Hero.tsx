@@ -27,45 +27,6 @@ const Hero = () => {
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
 
   const openCollaborationModal = (serviceType: string) => {
-    setModalServiceType(serviceType);
-    setModalOpen(true);
-  };
-
-  const openDetail = (d: CardDetail) => setDetail(d);
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      toast.error(t.newsletter?.errorEmail || "Please enter a valid email");
-      return;
-    }
-
-    setIsSubmittingEmail(true);
-    try {
-      const { error } = await supabase
-        .from("newsletter_subscribers" as any)
-        .insert({ email: email.trim().toLowerCase() } as any);
-
-      if (error) {
-        if (error.code === "23505") {
-          toast.info(t.newsletter?.alreadySubscribed || "You're already subscribed!");
-        } else {
-          throw error;
-        }
-      } else {
-        toast.success(t.newsletter?.success || "Successfully subscribed!");
-        setEmail("");
-        supabase.functions.invoke("send-push", {
-          body: { name: email.trim(), service_type: "Newsletter Signup" },
-        }).catch(console.error);
-      }
-    } catch (error) {
-      console.error("Email capture error:", error);
-      toast.error(t.newsletter?.errorGeneral || "Something went wrong. Please try again.");
-    } finally {
-      setIsSubmittingEmail(false);
-    }
-  };
 
   const slides: Array<{
     type: SlideType;
