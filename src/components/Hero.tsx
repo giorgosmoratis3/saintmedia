@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import shopifyLogo from "@/assets/shopify-logo.png";
 import wordpressLogo from "@/assets/wordpress-logo.png";
 import n8nLogo from "@/assets/n8n-logo.png";
+import NeonCurves from "./NeonCurves";
 
 type SlideType = "website" | "eshop" | "email" | "qrmenu" | "waiter" | "booking" | "automation" | "chatbot";
 
