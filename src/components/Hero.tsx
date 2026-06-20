@@ -22,11 +22,12 @@ const Hero = () => {
   const [modalServiceType, setModalServiceType] = useState("");
   const [detail, setDetail] = useState<CardDetail | null>(null);
 
-  // Email capture state
-  const [email, setEmail] = useState("");
-  const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
-
   const openCollaborationModal = (serviceType: string) => {
+    setModalServiceType(serviceType);
+    setModalOpen(true);
+  };
+
+  const openDetail = (d: CardDetail) => setDetail(d);
 
   const slides: Array<{
     type: SlideType;
