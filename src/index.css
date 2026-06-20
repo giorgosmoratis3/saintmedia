@@ -447,3 +447,15 @@
     will-change: transform;
   }
 }
+
+@keyframes neon-draw {
+  0% { stroke-dashoffset: 3000; opacity: 0; }
+  10% { opacity: 1; }
+  60% { stroke-dashoffset: 0; opacity: 1; }
+  85% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -3000; opacity: 0; }
+}
+
+@keyframes neon-dash {
+  to { stroke-dashoffset: -200; }
+}
