@@ -3,7 +3,6 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import saintmediaLogo from "@/assets/saintmedia-logo-white.png";
 import { useLanguage } from "@/contexts/language-context";
-import NewsletterBar from "./NewsletterBar";
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -110,14 +109,6 @@ const Footer = () => {
           style={{ background: "radial-gradient(circle, #60A5FA 0%, transparent 70%)" }} />
 
         <div className="container-max px-6 md:px-12 relative z-10">
-          {/* Newsletter signup */}
-          <div className="mb-12 text-center">
-            <p className="text-sm md:text-base text-white/70 mb-4">
-              {isEl ? "Μείνε ενημερωμένος για νέα και αυτοματισμούς" : "Stay updated with new releases and AI automations"}
-            </p>
-            <NewsletterBar />
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10 md:gap-8">
             {/* Brand */}
             <div className="flex flex-col gap-4">
