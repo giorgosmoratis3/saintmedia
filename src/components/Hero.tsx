@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, QrCode, BellRing, CalendarCheck, Mail, Bot, Loader2, Send } from "lucide-react";
+import { ArrowRight, QrCode, BellRing, CalendarCheck, Mail, Bot } from "lucide-react";
 import CollaborationRequestModal from "./CollaborationRequestModal";
 import CardDetailModal, { CardDetail } from "./CardDetailModal";
+import NewsletterBar from "./NewsletterBar";
 import { useLanguage } from "@/contexts/language-context";
 import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
 import shopifyLogo from "@/assets/shopify-logo.png";
 import wordpressLogo from "@/assets/wordpress-logo.png";
 import n8nLogo from "@/assets/n8n-logo.png";
