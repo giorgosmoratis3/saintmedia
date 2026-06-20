@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import saintmediaLogo from "@/assets/saintmedia-logo-white.png";
 import { useLanguage } from "@/contexts/language-context";
+import NewsletterBar from "./NewsletterBar";
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
