@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import shopifyLogo from "@/assets/shopify-logo.png";
 import wordpressLogo from "@/assets/wordpress-logo.png";
 import n8nLogo from "@/assets/n8n-logo.png";
+import NeonCurves from "./NeonCurves";
 
 type SlideType = "website" | "eshop" | "email" | "qrmenu" | "waiter" | "booking" | "automation" | "chatbot";
 
@@ -263,6 +264,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 rounded-full bg-white/5 blur-[80px] md:blur-[100px]" />
         <div className="absolute bottom-1/4 right-1/4 w-80 md:w-[500px] h-80 md:h-[500px] rounded-full bg-white/3 blur-[100px] md:blur-[120px]" />
+        <NeonCurves />
       </div>
 
       <div className="container-max section-padding relative z-10 w-full">
