@@ -452,14 +452,45 @@ export const en = {
   // Privacy Policy
   privacy: {
     title: "Privacy Policy",
-    s1Title: "1. Data Collection",
-    s1Text: "SaintMedia collects only the necessary data to provide our services. This includes contact details such as email and phone number that you provide to us.",
-    s2Title: "2. Data Usage",
-    s2Text: "Your data is used exclusively for communication regarding our services and is not shared with third parties without your consent.",
-    s3Title: "3. Security",
-    s3Text: "We take all necessary measures to protect your personal data from unauthorized access.",
-    s4Title: "4. Contact",
-    s4Text: "For any questions regarding our privacy policy, contact us through the contact form on our website.",
+    intro: "At SaintMedia, we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and safeguard the information you provide when using our website and services. By accessing our website or engaging with our services, you consent to the practices described in this policy.",
+    sections: [
+      {
+        title: "1. Information We Collect",
+        text: "We collect information that you voluntarily provide to us, including your name, email address, phone number, and business details when you fill out contact forms, request quotes, or subscribe to our newsletter. We may also collect technical data such as your IP address, browser type, device information, and browsing behavior through cookies and similar technologies to improve your experience on our website.",
+      },
+      {
+        title: "2. How We Use Your Information",
+        text: "The information we collect is used to respond to your inquiries, provide the services you request, send you updates and marketing communications (if you have opted in), improve our website and services, and comply with legal obligations. We do not sell, rent, or share your personal information with third parties for their marketing purposes without your explicit consent.",
+      },
+      {
+        title: "3. Cookies & Tracking Technologies",
+        text: "Our website uses cookies and similar tracking technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. You can choose to disable cookies through your browser settings, though this may affect certain functionality of our website.",
+      },
+      {
+        title: "4. Data Retention",
+        text: "We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, or reporting requirements. When your data is no longer needed, we will securely delete or anonymize it in accordance with applicable data protection laws.",
+      },
+      {
+        title: "5. Your Rights",
+        text: "You have the right to access, correct, update, or request deletion of your personal information at any time. You may also object to the processing of your data, request restriction of processing, or ask for data portability. To exercise these rights, please contact us using the information provided on our website.",
+      },
+      {
+        title: "6. Security Measures",
+        text: "We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include encryption, access controls, and regular security assessments. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.",
+      },
+      {
+        title: "7. Third-Party Services",
+        text: "We may use trusted third-party service providers (such as hosting providers, payment processors, and analytics tools) to operate our business. These providers have access to your personal information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose. We carefully select our partners and require them to maintain adequate data protection standards.",
+      },
+      {
+        title: "8. Changes to This Policy",
+        text: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically to stay informed about how we protect your information.",
+      },
+      {
+        title: "9. Contact Us",
+        text: "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us through the contact form on our website. We are committed to addressing your inquiries promptly and transparently.",
+      },
+    ],
   },
 
   // Terms of Use
