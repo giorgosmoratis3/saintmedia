@@ -452,27 +452,93 @@ export const en = {
   // Privacy Policy
   privacy: {
     title: "Privacy Policy",
-    s1Title: "1. Data Collection",
-    s1Text: "SaintMedia collects only the necessary data to provide our services. This includes contact details such as email and phone number that you provide to us.",
-    s2Title: "2. Data Usage",
-    s2Text: "Your data is used exclusively for communication regarding our services and is not shared with third parties without your consent.",
-    s3Title: "3. Security",
-    s3Text: "We take all necessary measures to protect your personal data from unauthorized access.",
-    s4Title: "4. Contact",
-    s4Text: "For any questions regarding our privacy policy, contact us through the contact form on our website.",
+    intro: "At SaintMedia, we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and safeguard the information you provide when using our website and services. By accessing our website or engaging with our services, you consent to the practices described in this policy.",
+    sections: [
+      {
+        title: "1. Information We Collect",
+        text: "We collect information that you voluntarily provide to us, including your name, email address, phone number, and business details when you fill out contact forms, request quotes, or subscribe to our newsletter. We may also collect technical data such as your IP address, browser type, device information, and browsing behavior through cookies and similar technologies to improve your experience on our website.",
+      },
+      {
+        title: "2. How We Use Your Information",
+        text: "The information we collect is used to respond to your inquiries, provide the services you request, send you updates and marketing communications (if you have opted in), improve our website and services, and comply with legal obligations. We do not sell, rent, or share your personal information with third parties for their marketing purposes without your explicit consent.",
+      },
+      {
+        title: "3. Cookies & Tracking Technologies",
+        text: "Our website uses cookies and similar tracking technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. You can choose to disable cookies through your browser settings, though this may affect certain functionality of our website.",
+      },
+      {
+        title: "4. Data Retention",
+        text: "We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including legal, accounting, or reporting requirements. When your data is no longer needed, we will securely delete or anonymize it in accordance with applicable data protection laws.",
+      },
+      {
+        title: "5. Your Rights",
+        text: "You have the right to access, correct, update, or request deletion of your personal information at any time. You may also object to the processing of your data, request restriction of processing, or ask for data portability. To exercise these rights, please contact us using the information provided on our website.",
+      },
+      {
+        title: "6. Security Measures",
+        text: "We implement appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. These measures include encryption, access controls, and regular security assessments. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.",
+      },
+      {
+        title: "7. Third-Party Services",
+        text: "We may use trusted third-party service providers (such as hosting providers, payment processors, and analytics tools) to operate our business. These providers have access to your personal information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose. We carefully select our partners and require them to maintain adequate data protection standards.",
+      },
+      {
+        title: "8. Changes to This Policy",
+        text: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically to stay informed about how we protect your information.",
+      },
+      {
+        title: "9. Contact Us",
+        text: "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us through the contact form on our website. We are committed to addressing your inquiries promptly and transparently.",
+      },
+    ],
   },
 
   // Terms of Use
   terms: {
     title: "Terms of Use",
-    s1Title: "1. General Terms",
-    s1Text: "By using SaintMedia's services, you accept these terms of use. We reserve the right to modify the terms without prior notice.",
-    s2Title: "2. Services",
-    s2Text: "We provide content creation and social media management services. The details of each collaboration are defined in a separate agreement.",
-    s3Title: "3. Intellectual Property",
-    s3Text: "Content created remains the property of SaintMedia until payment is completed, at which point it is transferred to the client.",
-    s4Title: "4. Limitation of Liability",
-    s4Text: "SaintMedia is not responsible for results that depend on algorithms of third-party platforms (Instagram, TikTok, etc.).",
+    intro: "Welcome to SaintMedia. These Terms of Use govern your access to and use of our website, services, and any content, features, or functionality offered by SaintMedia. By accessing our website or engaging our services, you acknowledge that you have read, understood, and agree to be bound by these terms. If you do not agree with any part of these terms, you must discontinue use of our services immediately.",
+    sections: [
+      {
+        title: "1. Acceptance of Terms",
+        text: "By using our website and services, you represent that you are at least 18 years of age or have the legal capacity to enter into binding agreements. These Terms of Use constitute a legally binding agreement between you and SaintMedia regarding your use of our services. We reserve the right to modify, amend, or update these terms at any time without prior notice. Changes will be effective immediately upon posting on this page. Your continued use of our services following any modifications constitutes acceptance of the revised terms.",
+      },
+      {
+        title: "2. Description of Services",
+        text: "SaintMedia provides digital marketing services, including but not limited to website development, e-shop creation, QR menu solutions, social media content creation and management, AI automation workflows, and related consulting services. The specific scope, deliverables, timeline, and pricing for each project are outlined in a separate agreement or proposal that is agreed upon by both parties before work begins. All services are provided subject to availability and our professional discretion.",
+      },
+      {
+        title: "3. Project Agreements & Payments",
+        text: "Each client engagement is governed by a separate project agreement that details the scope of work, deliverables, timeline, payment schedule, and any specific terms relevant to that project. Payment terms typically require an initial deposit to commence work, with the balance due upon completion or according to the milestones defined in the agreement. Late payments may result in project delays or suspension of services. All fees are quoted in Euros unless otherwise specified and do not include applicable taxes.",
+      },
+      {
+        title: "4. Intellectual Property Rights",
+        text: "All content, designs, code, and creative materials produced by SaintMedia during the course of a project remain the intellectual property of SaintMedia until full payment has been received. Upon completion of payment, ownership of the final deliverables is transferred to the client as specified in the project agreement. SaintMedia reserves the right to use completed projects for portfolio, promotional, and marketing purposes unless otherwise agreed in writing. Third-party assets, plugins, or software used in projects may be subject to their own licensing terms.",
+      },
+      {
+        title: "5. Client Responsibilities",
+        text: "Clients are responsible for providing accurate, complete, and timely information, content, and materials necessary for the completion of their project. This includes but is not limited to logos, branding assets, product information, images, and written copy. Delays caused by the client's failure to provide required materials may result in project timeline extensions and additional fees. Clients warrant that all materials provided do not infringe on the intellectual property rights of any third party.",
+      },
+      {
+        title: "6. Limitation of Liability",
+        text: "SaintMedia makes every reasonable effort to deliver high-quality services, but we do not guarantee specific results, outcomes, or performance metrics, particularly those dependent on third-party platforms, algorithms, or external factors beyond our control (including but not limited to Instagram, TikTok, Facebook, Google, and Shopify algorithms). To the fullest extent permitted by law, SaintMedia's total liability arising from or relating to our services shall not exceed the total amount paid by the client for the specific project giving rise to the liability. We are not liable for any indirect, incidental, consequential, or punitive damages.",
+      },
+      {
+        title: "7. Revisions & Modifications",
+        text: "The number of revisions included in each project is specified in the project agreement. Additional revisions beyond the agreed scope may incur extra charges. Minor modifications or bug fixes related to deliverables provided by SaintMedia are typically covered within a specified warranty period, after which additional work will be billed at our standard rates. Requests for significant changes to the original scope may require a revised agreement and additional fees.",
+      },
+      {
+        title: "8. Termination",
+        text: "Either party may terminate a project agreement by providing written notice. In the event of termination by the client, any work completed up to the termination date will be billed accordingly, and the initial deposit may be forfeited depending on the stage of the project. In the event of termination by SaintMedia due to breach of these terms or non-payment, all outstanding fees become immediately due. Upon termination, any licenses or access rights granted to the client may be revoked.",
+      },
+      {
+        title: "9. Governing Law & Dispute Resolution",
+        text: "These Terms of Use and any disputes arising from them shall be governed by and construed in accordance with the laws of Greece. Any disputes that cannot be resolved amicably shall be subject to the exclusive jurisdiction of the courts of Patras, Greece. Before initiating any legal proceedings, both parties agree to attempt to resolve disputes through good-faith negotiation.",
+      },
+      {
+        title: "10. Contact Information",
+        text: "If you have any questions about these Terms of Use, please contact us through the contact form on our website. We are committed to addressing your inquiries and resolving any concerns in a timely and professional manner.",
+      },
+    ],
   },
 
   // Website Offer Page

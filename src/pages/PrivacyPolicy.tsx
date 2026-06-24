@@ -12,11 +12,13 @@ const PrivacyPolicy = () => {
             {t.privacy.title}
           </h1>
           
-          <div className="prose prose-invert max-w-none space-y-6 text-background/80">
-            {(['s1', 's2', 's3', 's4'] as const).map((key) => (
-              <section key={key}>
-                <h2 className="text-xl font-semibold text-background mb-3">{t.privacy[`${key}Title`]}</h2>
-                <p>{t.privacy[`${key}Text`]}</p>
+          <div className="prose prose-invert max-w-none space-y-8 text-background/80">
+            <p className="text-lg leading-relaxed">{t.privacy.intro}</p>
+            
+            {t.privacy.sections.map((section, index) => (
+              <section key={index}>
+                <h2 className="text-xl font-semibold text-background mb-3">{section.title}</h2>
+                <p className="leading-relaxed">{section.text}</p>
               </section>
             ))}
           </div>
