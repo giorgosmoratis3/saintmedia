@@ -496,14 +496,49 @@ export const en = {
   // Terms of Use
   terms: {
     title: "Terms of Use",
-    s1Title: "1. General Terms",
-    s1Text: "By using SaintMedia's services, you accept these terms of use. We reserve the right to modify the terms without prior notice.",
-    s2Title: "2. Services",
-    s2Text: "We provide content creation and social media management services. The details of each collaboration are defined in a separate agreement.",
-    s3Title: "3. Intellectual Property",
-    s3Text: "Content created remains the property of SaintMedia until payment is completed, at which point it is transferred to the client.",
-    s4Title: "4. Limitation of Liability",
-    s4Text: "SaintMedia is not responsible for results that depend on algorithms of third-party platforms (Instagram, TikTok, etc.).",
+    intro: "Welcome to SaintMedia. These Terms of Use govern your access to and use of our website, services, and any content, features, or functionality offered by SaintMedia. By accessing our website or engaging our services, you acknowledge that you have read, understood, and agree to be bound by these terms. If you do not agree with any part of these terms, you must discontinue use of our services immediately.",
+    sections: [
+      {
+        title: "1. Acceptance of Terms",
+        text: "By using our website and services, you represent that you are at least 18 years of age or have the legal capacity to enter into binding agreements. These Terms of Use constitute a legally binding agreement between you and SaintMedia regarding your use of our services. We reserve the right to modify, amend, or update these terms at any time without prior notice. Changes will be effective immediately upon posting on this page. Your continued use of our services following any modifications constitutes acceptance of the revised terms.",
+      },
+      {
+        title: "2. Description of Services",
+        text: "SaintMedia provides digital marketing services, including but not limited to website development, e-shop creation, QR menu solutions, social media content creation and management, AI automation workflows, and related consulting services. The specific scope, deliverables, timeline, and pricing for each project are outlined in a separate agreement or proposal that is agreed upon by both parties before work begins. All services are provided subject to availability and our professional discretion.",
+      },
+      {
+        title: "3. Project Agreements & Payments",
+        text: "Each client engagement is governed by a separate project agreement that details the scope of work, deliverables, timeline, payment schedule, and any specific terms relevant to that project. Payment terms typically require an initial deposit to commence work, with the balance due upon completion or according to the milestones defined in the agreement. Late payments may result in project delays or suspension of services. All fees are quoted in Euros unless otherwise specified and do not include applicable taxes.",
+      },
+      {
+        title: "4. Intellectual Property Rights",
+        text: "All content, designs, code, and creative materials produced by SaintMedia during the course of a project remain the intellectual property of SaintMedia until full payment has been received. Upon completion of payment, ownership of the final deliverables is transferred to the client as specified in the project agreement. SaintMedia reserves the right to use completed projects for portfolio, promotional, and marketing purposes unless otherwise agreed in writing. Third-party assets, plugins, or software used in projects may be subject to their own licensing terms.",
+      },
+      {
+        title: "5. Client Responsibilities",
+        text: "Clients are responsible for providing accurate, complete, and timely information, content, and materials necessary for the completion of their project. This includes but is not limited to logos, branding assets, product information, images, and written copy. Delays caused by the client's failure to provide required materials may result in project timeline extensions and additional fees. Clients warrant that all materials provided do not infringe on the intellectual property rights of any third party.",
+      },
+      {
+        title: "6. Limitation of Liability",
+        text: "SaintMedia makes every reasonable effort to deliver high-quality services, but we do not guarantee specific results, outcomes, or performance metrics, particularly those dependent on third-party platforms, algorithms, or external factors beyond our control (including but not limited to Instagram, TikTok, Facebook, Google, and Shopify algorithms). To the fullest extent permitted by law, SaintMedia's total liability arising from or relating to our services shall not exceed the total amount paid by the client for the specific project giving rise to the liability. We are not liable for any indirect, incidental, consequential, or punitive damages.",
+      },
+      {
+        title: "7. Revisions & Modifications",
+        text: "The number of revisions included in each project is specified in the project agreement. Additional revisions beyond the agreed scope may incur extra charges. Minor modifications or bug fixes related to deliverables provided by SaintMedia are typically covered within a specified warranty period, after which additional work will be billed at our standard rates. Requests for significant changes to the original scope may require a revised agreement and additional fees.",
+      },
+      {
+        title: "8. Termination",
+        text: "Either party may terminate a project agreement by providing written notice. In the event of termination by the client, any work completed up to the termination date will be billed accordingly, and the initial deposit may be forfeited depending on the stage of the project. In the event of termination by SaintMedia due to breach of these terms or non-payment, all outstanding fees become immediately due. Upon termination, any licenses or access rights granted to the client may be revoked.",
+      },
+      {
+        title: "9. Governing Law & Dispute Resolution",
+        text: "These Terms of Use and any disputes arising from them shall be governed by and construed in accordance with the laws of Greece. Any disputes that cannot be resolved amicably shall be subject to the exclusive jurisdiction of the courts of Patras, Greece. Before initiating any legal proceedings, both parties agree to attempt to resolve disputes through good-faith negotiation.",
+      },
+      {
+        title: "10. Contact Information",
+        text: "If you have any questions about these Terms of Use, please contact us through the contact form on our website. We are committed to addressing your inquiries and resolving any concerns in a timely and professional manner.",
+      },
+    ],
   },
 
   // Website Offer Page
