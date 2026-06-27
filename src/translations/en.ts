@@ -438,7 +438,7 @@ export const en = {
 
   // Footer
   footer: {
-    tagline: "Built with Saintflow Systems",
+    tagline: "Built with Saintmedia Systems",
     privacyPolicy: "Privacy Policy",
     termsOfUse: "Terms of Use",
     adminLogin: "Admin Login",

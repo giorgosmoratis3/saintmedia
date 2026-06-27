@@ -445,7 +445,7 @@ export const el = {
 
   // Footer
   footer: {
-    tagline: "Built with Saintflow Systems",
+    tagline: "Built with Saintmedia Systems",
     privacyPolicy: "Πολιτική Απορρήτου",
     termsOfUse: "Όροι Χρήσης",
     adminLogin: "Είσοδος Admin",
