@@ -438,7 +438,7 @@ export const en = {
 
   // Footer
   footer: {
-    tagline: "Built with Saintmedia Systems",
+    tagline: "Built with Saint Systems",
     privacyPolicy: "Privacy Policy",
     termsOfUse: "Terms of Use",
     adminLogin: "Admin Login",
