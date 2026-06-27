@@ -142,7 +142,7 @@ const Index = () => {
             {/* Discreet built-with line */}
             <div className="text-center py-6">
               <p className="text-[11px] md:text-xs text-white/35 tracking-wider uppercase">
-                Built with Saintmedia Systems
+                Built with Saint Systems
               </p>
             </div>
           </main>
