@@ -15,7 +15,6 @@ export default defineTool({
     phone: z.string().min(4).describe("Phone number the SaintMedia team should call back."),
   },
   annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: false },
-  needsApproval: true,
   handler: async ({ service_type, phone }) => {
     const supabase = createClient(
       process.env.SUPABASE_URL!,

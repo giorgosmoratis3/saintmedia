@@ -98,7 +98,6 @@ var submit_collaboration_request_default = defineTool4({
     phone: z.string().min(4).describe("Phone number the SaintMedia team should call back.")
   },
   annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: false, openWorldHint: false },
-  needsApproval: true,
   handler: async ({ service_type, phone }) => {
     const supabase = createClient3(
       process.env.SUPABASE_URL,
@@ -130,7 +129,6 @@ var subscribe_newsletter_default = defineTool5({
     email: z2.string().email().describe("Email address to subscribe.")
   },
   annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false },
-  needsApproval: true,
   handler: async ({ email }) => {
     const supabase = createClient4(
       process.env.SUPABASE_URL,

@@ -10,7 +10,6 @@ export default defineTool({
     email: z.string().email().describe("Email address to subscribe."),
   },
   annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false },
-  needsApproval: true,
   handler: async ({ email }) => {
     const supabase = createClient(
       process.env.SUPABASE_URL!,
