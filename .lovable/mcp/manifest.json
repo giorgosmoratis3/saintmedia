@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "saintmedia-mcp",
+      "version": "0.1.0",
+      "title": "SaintMedia MCP"
+    },
+    "tools": [
+      {
+        "name": "list_packages",
+        "title": "List packages",
+        "description": "List all visible SaintMedia service packages (web development, AI automation, e-shop setup).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_portfolio_projects",
+        "title": "List portfolio projects",
+        "description": "List published SaintMedia portfolio projects shown on the homepage.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_contact_info",
+        "title": "Get SaintMedia contact info",
+        "description": "Return SaintMedia's public contact details and website URLs.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_collaboration_request",
+        "title": "Submit collaboration request",
+        "description": "Submit a new collaboration request to SaintMedia. The team will follow up on the provided phone number.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "service_type": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The service the user is interested in (e.g. 'Website Setup', 'E-shop', 'AI Automation')."
+            },
+            "phone": {
+              "type": "string",
+              "minLength": 4,
+              "description": "Phone number the SaintMedia team should call back."
+            }
+          },
+          "required": [
+            "service_type",
+            "phone"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "subscribe_newsletter",
+        "title": "Subscribe to newsletter",
+        "description": "Subscribe an email address to the SaintMedia newsletter.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "Email address to subscribe."
+            }
+          },
+          "required": [
+            "email"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
