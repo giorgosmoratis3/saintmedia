@@ -146,8 +146,8 @@ const Hero = () => {
     },
     {
       type: "automation",
-      badge: "AI Automation",
-      headline: "AI Automation",
+      badge: language === "el" ? "Αυτοματισμοί AI" : "AI Automation",
+      headline: language === "el" ? "Αυτοματισμοί AI" : "AI Automation",
       description:
         language === "el"
           ? "Συνδέουμε τα εργαλεία σου με AI για να τρέχουν οι διαδικασίες μόνες τους."
@@ -229,7 +229,7 @@ const Hero = () => {
       type === "qrmenu"
         ? ["QR-MENU"]
         : type === "website"
-          ? ["Website", "Ιστοσελίδα", "βιτρίνα", "storefront"]
+          ? ["Website", "Ιστοσελίδα", "Ιστοσελίδας", "Κατασκευή", "βιτρίνα", "storefront"]
           : type === "eshop"
             ? ["E-Shop"]
             : [];
@@ -289,9 +289,11 @@ const Hero = () => {
               const tokens: Array<{ text: string; className?: string }> =
                 language === "el"
                   ? [
-                      { text: "Web Development", className: "hero-shimmer-blue" },
+                      { text: "Κατασκευή", className: "hero-shimmer-blue" },
+                      { text: "Ιστοσελίδων", className: "hero-shimmer-blue" },
                       { text: "&" },
-                      { text: "AI Automation", className: "hero-shimmer-red" },
+                      { text: "Αυτοματισμοί", className: "hero-shimmer-red" },
+                      { text: "AI", className: "hero-shimmer-red" },
                       { text: "που" },
                       { text: "επιταχύνουν" },
                       { text: "την" },

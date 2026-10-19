@@ -13,7 +13,7 @@ const WordPressIcon = ({ className, ...props }: React.SVGProps<SVGSVGElement>) =
 
 const Services = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [current, setCurrent] = useState(0);
 
   const websiteServices = [
@@ -56,7 +56,7 @@ const Services = () => {
     { title: t.services.eshopTitle, services: eshopServices, badge: "E-Shop" },
     { title: t.services.socialTitle, services: socialMediaServices, badge: "Social Media" },
     { title: t.services.qrTitle, services: qrMenuServices, badge: "QR Menu" },
-    { title: t.services.aiTitle, services: aiServices, badge: "AI Automations" },
+    { title: t.services.aiTitle, services: aiServices, badge: language === "el" ? "Αυτοματισμοί AI" : "AI Automations" },
   ];
 
   const liquidGlassStyle = {
