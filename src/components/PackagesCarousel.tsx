@@ -39,7 +39,7 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
         { text: isEl ? "Responsive σε όλες τις συσκευές" : "Fully responsive design", included: true },
         { text: isEl ? "Βασικό SEO setup" : "Basic SEO setup", included: true },
         { text: isEl ? "Φόρμα επικοινωνίας" : "Contact form", included: true },
-        { text: isEl ? "AI Automations" : "AI Automations", included: true },
+        { text: isEl ? "Αυτοματισμοί AI" : "AI Automations", included: true },
       ],
       cta: isEl ? "ΞΕΚΙΝΑ" : "GET STARTED",
       serviceType: isEl ? "Κατασκευή Ιστοσελίδας" : "Website Development",
@@ -70,7 +70,7 @@ const PackagesCarousel = ({ onSelect }: PackagesCarouselProps) => {
     {
       id: "ai",
       badge: isEl ? "ΝΕΟ" : "NEW",
-      name: "AI Automation",
+      name: isEl ? "Αυτοματισμοί AI" : "AI Automation",
       tagline: isEl ? "Αυτοματισμοί που εξοικονομούν ώρες κάθε εβδομάδα" : "Workflows that save hours every week",
       features: [
         { text: isEl ? "Custom AI workflow με n8n" : "Custom AI workflow with n8n", included: true },

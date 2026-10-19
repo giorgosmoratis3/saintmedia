@@ -13,7 +13,7 @@ export const el = {
 
   // Hero slides
   hero: {
-    mainTitle: "Smart Web Development & AI Automation για εταιρείες με γρήγορη ανάπτυξη.",
+    mainTitle: "Κατασκευή Ιστοσελίδων & Αυτοματισμοί AI για εταιρείες με γρήγορη ανάπτυξη.",
     mainSubtitle: "Από ιστοσελίδες που μετατρέπουν επισκέπτες σε πελάτες, έως προσαρμοσμένους αυτοματισμούς AI. Σχεδιάζουμε, κατασκευάζουμε και αυτοματοποιούμε τις ψηφιακές σου λειτουργίες ώστε να επικεντρωθείς στην ανάπτυξη.",
     forStartups: "Startups με Γρήγορη Ανάπτυξη",
     forStartupsDesc: "Επιτάχυνε την ανάπτυξη με αυτοματισμούς AI και ιστοσελίδες που μετατρέπουν επισκέπτες σε πελάτες.",
@@ -23,7 +23,7 @@ export const el = {
     viralBadge: "Digital Marketing Agency",
     eshopBadge: "E-Commerce Solutions",
     qrBadge: "Digital Menu Solutions",
-    websiteHeadline: "Web Development",
+    websiteHeadline: "Κατασκευή Ιστοσελίδας",
     websiteSub: "Μια σύγχρονη ιστοσελίδα με μοντέρνο design, scroll animations, εφέ, responsive εμπειρία και περιεχόμενο που χτίζει κύρος από το πρώτο κλικ.",
     websiteCta: "Ξεκίνα τώρα",
     viralHeadline: "Κάνουμε την επιχείρησή σου VIRAL.",
