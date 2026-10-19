@@ -229,7 +229,7 @@ const Hero = () => {
       type === "qrmenu"
         ? ["QR-MENU"]
         : type === "website"
-          ? ["Website", "Ιστοσελίδα", "βιτρίνα", "storefront"]
+          ? ["Website", "Ιστοσελίδα", "Ιστοσελίδας", "Κατασκευή", "βιτρίνα", "storefront"]
           : type === "eshop"
             ? ["E-Shop"]
             : [];
